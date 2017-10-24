@@ -1,0 +1,12 @@
+version: '2'
+services:
+  proxy:
+    build: .
+    restart: always
+    ports:
+      - 80:80
+    networks:
+      - quotster_default
+networks:
+  quotster_default:
+    external: true
