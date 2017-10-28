@@ -6,9 +6,12 @@ services:
     ports:
       - 80:80
     networks:
+      - chitter_default
       - quotster_default
       - svglinks_default
 networks:
+  chitter_default:
+    external: true
   quotster_default:
     external: true
   svglinks_default:
